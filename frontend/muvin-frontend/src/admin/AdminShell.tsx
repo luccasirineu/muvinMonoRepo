@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 import type { Corretor } from '../types';
 import { Logo } from '../components/Logo';
 
@@ -41,9 +42,9 @@ export function AdminShell({ route, setRoute, onLogout, corretor, children }: Ad
           ))}
         </nav>
         <div className="admin-side-foot">
-          <button className="admin-public-link" onClick={() => setRoute('home')}>
+          <Link to="/" className="admin-public-link">
             ↗ Ver site público
-          </button>
+          </Link>
           <div className="admin-user">
             <div className="admin-user-avatar">
               {corretor?.photoUrl
